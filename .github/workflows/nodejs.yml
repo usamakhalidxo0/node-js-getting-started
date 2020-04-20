@@ -32,16 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: init
-        run: ls -a
-      - name: pwd
-        run: pwd
       - name: add remote
-        run: git clone https://github.com/usamakhalidxo0/ci-cd.git .
-      - name: ls
-        run: ls -a
-      - name: pwd
-        run: pwd
+        run: git clone https://github.com/usamakhalidxo0/ode-js-getting-started.git .
       - name: add heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
