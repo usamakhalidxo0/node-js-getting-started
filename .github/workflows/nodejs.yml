@@ -33,7 +33,7 @@ jobs:
     
     steps:
       - name: add remote
-        run: git clone https://github.com/usamakhalidxo0/ode-js-getting-started.git .
+        run: git clone https://github.com/usamakhalidxo0/node-js-getting-started.git .
       - name: add heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
