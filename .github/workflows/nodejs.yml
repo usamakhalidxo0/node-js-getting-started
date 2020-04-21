@@ -32,13 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: add remote
+      - name: clone current
         run: git clone https://github.com/usamakhalidxo0/node-js-getting-started.git .
       - name: add heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: git remote add heroku https://heroku:${{ secrets.heroku_api_key }}@git.heroku.com/${{ secrets.heroku_app_name }}.git
-      - name: push remote
+      - name: push to heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: git push heroku master
